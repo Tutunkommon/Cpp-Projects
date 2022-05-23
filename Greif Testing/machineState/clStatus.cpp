@@ -1,3 +1,6 @@
+
+
+
 class clStatus{	
 
 	private:
@@ -19,3 +22,5 @@ class clStatus{
 		}
 
 }
+
+

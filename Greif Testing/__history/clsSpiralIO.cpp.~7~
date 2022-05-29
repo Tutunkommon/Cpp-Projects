@@ -16,9 +16,7 @@ class clsSpiralIO{
 		unsigned short currentSpeedLo;
 		unsigned short currentSpeedHi;
 		unsigned short totalCountLo;
-		unsigned short totalCountHi;
-
-		modbus mb;
+        unsigned short totalCountHi;
 
 
 
@@ -47,14 +45,6 @@ class clsSpiralIO{
 		bool  :  horn;					//000517
 
 
-		clsSpiralIO(char* ipAddress){
-
-			mb = modbus(ipAddress, 502);
-			mb.modbus_set_slave_id(1);
-			mb.modbus_connect();
-		};
-
-
 		void setRestartEnable(bool val){
 			restartEnable = val;
 		};
@@ -65,18 +55,6 @@ class clsSpiralIO{
 
 		bool getEstopState(){
             return(estopOK);
-		};
-
-		void setResetCount(bool val){
-			resetCount = val;
-		};
-
-		void setDummyMode(bool val){
-			FPMDummy = val;
-		};
-
-		void setJogFestoonFWD(bool val){
-            jogFestoonFWD = val;
 		};
 
 

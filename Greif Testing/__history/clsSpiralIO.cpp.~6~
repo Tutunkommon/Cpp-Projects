@@ -16,13 +16,14 @@ class clsSpiralIO{
 		unsigned short currentSpeedLo;
 		unsigned short currentSpeedHi;
 		unsigned short totalCountLo;
-		unsigned short totalCountHi;
-
-		modbus mb;
+        unsigned short totalCountHi;
 
 
 
 	public:
+
+
+
 
 		bool  :  restartEnable;			//412289.10
 		bool  :  bottomBypass;			//412289.11
@@ -45,41 +46,6 @@ class clsSpiralIO{
 		bool  :  tubeMarkerAir;			//000515
 		bool  :  tubeMarkerInk;			//000516
 		bool  :  horn;					//000517
-
-
-		clsSpiralIO(char* ipAddress){
-
-			mb = modbus(ipAddress, 502);
-			mb.modbus_set_slave_id(1);
-			mb.modbus_connect();
-		};
-
-
-		void setRestartEnable(bool val){
-			restartEnable = val;
-		};
-
-		void setBottomBypass(bool val){
-			bottomBypass = val;
-		};
-
-		bool getEstopState(){
-            return(estopOK);
-		};
-
-		void setResetCount(bool val){
-			resetCount = val;
-		};
-
-		void setDummyMode(bool val){
-			FPMDummy = val;
-		};
-
-		void setJogFestoonFWD(bool val){
-            jogFestoonFWD = val;
-		};
-
-
 
 
 };

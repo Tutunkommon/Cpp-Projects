@@ -48,10 +48,8 @@ class clsSpiralIO{
 
 
 		clsSpiralIO(char* ipAddress){
+            mb = modbus(ipAddress, 502);
 
-			mb = modbus(ipAddress, 502);
-			mb.modbus_set_slave_id(1);
-			mb.modbus_connect();
 		};
 
 

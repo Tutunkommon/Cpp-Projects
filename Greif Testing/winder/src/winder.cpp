@@ -14,7 +14,7 @@ int main(int argc, char **argv){
         using namespace std::this_thread;
         using namespace std::chrono;
 
-        modbus mb = modbus("192.168.0.1", 502);
+        modbus mb = modbus("192.168.101.5", 502);
         clStatus status;
 
         mb.modbus_set_slave_id(1);

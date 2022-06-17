@@ -21,8 +21,10 @@ int main(int argc, char **argv){
 	int x;
 	uint16_t read_holding_regs[1];
 
-
-	cout << line1.getEstopState();
+	for(x=0;x<120;x++){
+		cout << line1.getTotalCount();
+		sleep_for(seconds(1));
+	}
 
 
 	return(0);
